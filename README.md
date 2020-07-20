@@ -55,11 +55,11 @@ ADD  target/libs libs
 ADD suite/Get_actual_title.xml Get_actual_title.xml
 ADD suite/Get_actual_url.xml Get_actual_url.xml
 
-# Command line to execute the test
-# Expects below ennvironment variables
-# BROWSER = chrome / firefox
-# MODULE  = order-module / search-module
-# SELENIUM_HUB = selenium hub hostname / ipaddress
+#### # Command line to execute the test
+#### # Expects below ennvironment variables
+#### # BROWSER = chrome / firefox
+#### # MODULE  = order-module / search-module
+#### # SELENIUM_HUB = selenium hub hostname / ipaddress
 
 ENTRYPOINT java -cp container-test.jar:libs/* -DseleniumHubHost=$SELENIUM_HUB -Dbrowser=$BROWSER org.testng.TestNG $MODULE
 4.	Dockerlogin: docker login
@@ -83,19 +83,19 @@ ENTRYPOINT java -cp container-test.jar:libs/* -DseleniumHubHost=$SELENIUM_HUB -D
 3.	Docker file: This is called source code for Image. This is useful if we have one image.
 FROM openjdk:8-jre-slim
 
-# Add the project jar & copy dependencies
+#### # Add the project jar & copy dependencies
 ADD  target/container-test.jar /usr/share/tag/container-test.jar (Jar version like 0.0.1  we don’t need to consider )
 ADD  target/libs /usr/share/tag/libs
 
-# Add the suite xmls
+#### # Add the suite xmls
 ADD order-module.xml /usr/share/tag/order-module.xml
 ADD search-module.xml /usr/share/tag/search-module.xml
 
-# Command line to execute the test
-# Expects below ennvironment variables
-# BROWSER = chrome / firefox
-# MODULE  = order-module / search-module
-# GRIDHOST = selenium hub hostname / ipaddress
+#### # Command line to execute the test
+#### # Expects below ennvironment variables
+#### # BROWSER = chrome / firefox
+#### # MODULE  = order-module / search-module
+#### # GRIDHOST = selenium hub hostname / ipaddress
 
 ENTRYPOINT /usr/bin/java -cp /usr/share/tag/container-test.jar….
 
