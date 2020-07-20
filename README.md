@@ -1,4 +1,4 @@
-# Selenium_Sample_Example
+#### Selenium_Sample_Example
 
 Selenium Grid on Docker within Jenkins:
 1. Create Dockerfile.
@@ -47,11 +47,11 @@ FROM openjdk:8-jre-slim
 #A Directory in the base image to copy our depedencies
 WORKDIR /usr/share/tag
 
-# Add the project jar & copy dependencies
+#### # Add the project jar & copy dependencies
 ADD  target/selenium_grid_dockerfile.jar selenium_grid_dockerfile.jar
 ADD  target/libs libs
 
-# Add the suite xmls
+#### # Add the suite xmls
 ADD suite/Get_actual_title.xml Get_actual_title.xml
 ADD suite/Get_actual_url.xml Get_actual_url.xml
 
