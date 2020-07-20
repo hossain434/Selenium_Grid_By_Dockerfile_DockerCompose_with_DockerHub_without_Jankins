@@ -14,6 +14,8 @@ Selenium grid without docker.
 1. Download seleniun server
 2. Run: java -jar selenium-server-standalone-3.141.59.jar -role hub
 3. java -Dwebdriver.gecko.driver="C:\Users\ahoss1\Desktop\file\Workspace\seleniumgrid\chromekodriver.exe" -Dwebdriver.chrome.driver="C:\Users\ahoss1\Desktop\file\Workspace\seleniumgrid\chromedriver.exe" -jar selenium-server-standalone-3.141.59.jar -role webdriver -hub http://localhost:4444/grid/register -port 5566
+### Note that volume mapping in the docker-compose file is not working here. Not sure why not owrking.
+	
 4.Sample script:
 public class Get_actual_title_NoDocker {
     
