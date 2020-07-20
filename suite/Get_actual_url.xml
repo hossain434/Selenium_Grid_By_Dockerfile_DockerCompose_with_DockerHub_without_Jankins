@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="test.java.selenium_sample_example">
+	<test thread-count="5" name="Test1">
+		<classes>
+			<class
+				name="test.java.selenium_sample_example.Get_actual_url" />
+		</classes>
+	</test> <!-- Test1 -->
+</suite> <!-- Suite1 -->
