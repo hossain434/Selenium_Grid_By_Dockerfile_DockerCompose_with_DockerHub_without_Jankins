@@ -9,12 +9,13 @@ Selenium Grid on Docker within Jenkins:
 6. docker-compose up -d
 7. docker-compose ps  (Once the test execution is done, you would see Exit 0  (in case of any test failures, you would see Exit 1)
 8. docker logs <container id>
-9. As of 7/19/2020 Selenium Grid doesn't work V4.0.0, so i added 3.5.2 in the pom.xml 
-Selenium grid without docker.
+9. As of 7/19/2020 Selenium Grid doesn't work V4.0.0, so i added 3.5.2 in the pom.xml
+#### Note that volume mapping in the docker-compose file is not working here. Not sure why not owrking.
+	
+#### Selenium grid without docker.
 1. Download seleniun server
 2. Run: java -jar selenium-server-standalone-3.141.59.jar -role hub
 3. java -Dwebdriver.gecko.driver="C:\Users\ahoss1\Desktop\file\Workspace\seleniumgrid\chromekodriver.exe" -Dwebdriver.chrome.driver="C:\Users\ahoss1\Desktop\file\Workspace\seleniumgrid\chromedriver.exe" -jar selenium-server-standalone-3.141.59.jar -role webdriver -hub http://localhost:4444/grid/register -port 5566
-#### Note that volume mapping in the docker-compose file is not working here. Not sure why not owrking.
 	
 4.Sample script:
 public class Get_actual_title_NoDocker {
