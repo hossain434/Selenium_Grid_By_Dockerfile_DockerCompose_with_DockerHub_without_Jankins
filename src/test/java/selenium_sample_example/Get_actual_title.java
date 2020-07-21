@@ -15,9 +15,8 @@ public class Get_actual_title {
 	@Test
 	public void initiateDriver(String Port) throws MalformedURLException {
 		if (Port.equalsIgnoreCase("9001")) {
-			//String host = System.getProperty("seleniumHubHost");
-			//driver = new RemoteWebDriver(new URL("http://" + host + ":4444/wd/hub"), DesiredCapabilities.chrome());
-			driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), DesiredCapabilities.chrome());
+			String host = System.getProperty("seleniumHubHost");
+			driver = new RemoteWebDriver(new URL("http://" + host + ":4444/wd/hub"), DesiredCapabilities.chrome());
 			driver.manage().window().maximize();
 		}
 		String baseUrl = "http://demo.guru99.com/test/newtours/";
