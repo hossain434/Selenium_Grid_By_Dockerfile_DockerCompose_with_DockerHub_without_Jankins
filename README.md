@@ -4,7 +4,7 @@ Selenium Grid on Docker within Jenkins:
 1. Create Dockerfile.
 2. Run Docker file as: docker build --tag arif434/selenium_dockerfile_test:latest -f Dockerfile .
 3. docker login
-4. docker push arif434/selenium_dockerfile
+4. docker push arif434/selenium_dockerfile_test:latest
 5. Create docker-compose.yml (this work similar like terraform)
 6. docker-compose up -d
 7. docker-compose ps  (Once the test execution is done, you would see Exit 0  (in case of any test failures, you would see Exit 1)
